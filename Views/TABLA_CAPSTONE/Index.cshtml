@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Capstone_Integracion_2.Models.TABLA_CAPSTONE>
+
+@{
+    ViewBag.Title = "Inicio - Ingresar Empresa";
+}
+
+<h2>Ingresar Empresa para las Pruebas</h2>
+<form action="/TABLA_CAPSTONE/StartTests" method="post">
+    <label for="companyName">Nombre de la Empresa:</label>
+    <input type="text" id="companyName" name="companyName" required />
+    <button type="submit">Iniciar Pruebas</button>
+</form>

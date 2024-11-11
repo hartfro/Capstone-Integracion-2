@@ -1,0 +1,31 @@
+﻿@model Capstone_Integracion_2.Models.TABLA_CAPSTONE
+
+@{
+    ViewBag.Title = "Enlaces de Descarga de Artefactos";
+}
+
+<h2>Enlaces de Descarga de Artefactos</h2>
+
+@if (ViewBag.ArtifactLinks != null && ((string[])ViewBag.ArtifactLinks).Length > 0)
+{
+    <ul>
+        @foreach (var link in (string[])ViewBag.ArtifactLinks)
+        {
+            if (!string.IsNullOrEmpty(link))
+            {
+                <li><a href="@link" target="_blank">Descargar Artefacto</a></li>
+            }
+            else
+            {
+                <li>No se pudo obtener el enlace del artefacto.</li>
+            }
+        }
+    </ul>
+}
+else
+{
+    <p>No se encontraron enlaces de descarga.</p>
+}
+
+
+
